@@ -1,0 +1,75 @@
+// Default build file for Java projects
+// Applies both Java and Application plugin, the latter for easy running through gradle itself.
+
+// [ Standard Plugins ] //
+apply plugin: 'java'
+apply plugin: 'application'
+
+// [ Coding Standards ] //
+apply plugin: 'checkstyle'
+apply plugin: 'findbugs'
+
+// Below plugins are for easily creating 'fat jars' and Window's executable files.
+// apply plugin: 'edu.sc.seis.launch4j'
+// apply plugin: 'com.github.johnrengelman.shadow'
+
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+
+  compile 'org.slf4j:slf4j-api:1.7.21'
+
+  compile 'ch.qos.logback:logback-classic:1.1.7'
+  compile 'ch.qos.logback:logback-core:1.1.7'
+
+  //compile 'io.reactivex:rxjava:1.2.1' - favored FRP for Java
+}
+
+mainClassName = "net.thenightwolf.Main" // Enter main class here
+
+tasks.withType(FindBugs) {
+  reports {
+    xml.enabled = false
+    html.enabled = true
+  }
+}
+
+/*
+Uncomment if using launch4j and shadow plugin for easy fat jars and Windows executables.
+Modify the outfile name based on needs.
+
+shadowJar {
+    baseName = 'server'
+    classifier = null
+    version = null
+}
+
+launch4j {
+    outfile = "exe_name.exe"
+    headerType = "console" //gui, console, etc
+    mainClassName = project.mainClassName
+
+    copyConfigurable = project.tasks.shadowJar.outputs.files
+    jar = "lib/${project.tasks.shadowJar.archiveName}"
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://plugins.gradle.org/m2'
+        }
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'gradle.plugin.edu.sc.seis.gradle:launch4j:1.6.2'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+    }
+}
+*/

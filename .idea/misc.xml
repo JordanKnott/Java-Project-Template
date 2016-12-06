@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../AddressApp" value="1475086732074" />
+        <entry key="$PROJECT_DIR$/../../CoffeeMaker" value="1475340389385" />
+        <entry key="$PROJECT_DIR$/../../ControlServer" value="1480976993043" />
+        <entry key="$PROJECT_DIR$/../../DroidMessage/DroidMessage-Dev" value="10290759373498" />
+        <entry key="$PROJECT_DIR$/../../Galaga" value="1470280152614" />
+        <entry key="$PROJECT_DIR$/../../Gradle_Testing" value="1473812482399" />
+        <entry key="$PROJECT_DIR$/../../JennifersHeart" value="1475045553663" />
+        <entry key="$PROJECT_DIR$/../../PrimeFactorKata" value="2935997294443" />
+        <entry key="$PROJECT_DIR$/../../VisionFX" value="1475378570686" />
+        <entry key="$PROJECT_DIR$" value="1480983526229" />
+        <entry key="$PROJECT_DIR$/../../../DroidMessage-3.0" value="7390099184704" />
+        <entry key="$PROJECT_DIR$/../../../HyperSift-2.0.0/sifterAPI" value="1465429812749" />
+        <entry key="$PROJECT_DIR$/../../../HyperSift/HyperSiftUI" value="1463852855735" />
+        <entry key="$PROJECT_DIR$/../../../IdeaProjects/DroidMessage" value="1464235205402" />
+        <entry key="$PROJECT_DIR$/../../../jfoenix" value="5904980057716" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="true" assert-keyword="false" jdk-15="false" />
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

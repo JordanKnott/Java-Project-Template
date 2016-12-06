@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright (c) 2016 Jordan Knott
+  ~ License file can be found in the root directory (LICENSE.txt)
+  ~
+  ~ For the project DroidMessage, which can be found at: www.github.com/paradox-software/droidmessage
+  ~
+  -->
+
+<configuration debug="false">
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+
+    <timestamp key="byDay" datePattern="yyyy-MM-dd"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>true</withJansi>
+        <encoder>
+            <pattern>%green(%d{HH:mm:ss.SSS}) %highlight(%-5level) %cyan([%thread][%logger{0}]) %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/current.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            <maxHistory>12</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

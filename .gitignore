@@ -1,0 +1,11 @@
+
+# Build Directories
+build/
+
+# Compiled binaries
+*.class
+*.jar
+*.exe
+
+# Virtual machine crash logs
+hs_err_pid*
