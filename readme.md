@@ -12,16 +12,12 @@ Optional Shadow & launch4j plugin setup for easy 'fat jars' and Windows executab
 
 * Java Development Kit
 
-
 ## Building ##
 
-''''
-
+```
 git clone https://github.com/thenightwolf/java-template-project
 gradlew build
-
-'''''
-
+```
 
 ## License ##
 
