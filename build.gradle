@@ -9,6 +9,9 @@ apply plugin: 'application'
 apply plugin: 'checkstyle'
 apply plugin: 'findbugs'
 
+// [ Dependency Version Checker ] //
+apply plugin: 'com.github.ben-manes.versions'
+
 // Below plugins are for easily creating 'fat jars' and Window's executable files.
 // apply plugin: 'edu.sc.seis.launch4j'
 // apply plugin: 'com.github.johnrengelman.shadow'
@@ -59,6 +62,7 @@ launch4j {
     jar = "lib/${project.tasks.shadowJar.archiveName}"
 }
 
+*/
 buildscript {
     repositories {
         maven {
@@ -68,8 +72,14 @@ buildscript {
     }
 
     dependencies {
+
+      // Version Plugin
+      classpath 'com.github.ben-manes:gradle-versions-plugin:0.14.0'
+
+      /*
+        For building fat jars. TODO - Move to JavaFX Packager plugin
         classpath 'gradle.plugin.edu.sc.seis.gradle:launch4j:1.6.2'
         classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+        */
     }
 }
-*/
