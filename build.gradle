@@ -13,6 +13,9 @@ apply plugin: 'jacoco'
 // [ Dependency Version Checker ] //
 apply plugin: 'com.github.ben-manes.versions'
 
+// [ Test Console Reporter ] //
+apply plugin: 'com.github.ksoichiro.console.reporter'
+
 // Below plugins are for easily creating 'fat jars' and Window's executable files.
 // apply plugin: 'edu.sc.seis.launch4j'
 // apply plugin: 'com.github.johnrengelman.shadow'
@@ -98,6 +101,9 @@ buildscript {
 
       // Version Plugin
       classpath 'com.github.ben-manes:gradle-versions-plugin:0.14.0'
+
+      // Test Console Reporter
+      classpath 'com.github.ksoichiro:gradle-console-reporter:0.5.0'
 
       /*
         For building fat jars. TODO - Move to JavaFX Packager plugin
