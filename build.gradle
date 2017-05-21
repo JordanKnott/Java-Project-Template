@@ -19,6 +19,9 @@ apply plugin: 'com.github.ksoichiro.console.reporter'
 // [ License Plugin ] //
 apply plugin: "com.github.hierynomus.license"
 
+// [ SLoC Stat Generator ] //
+apply plugin: 'org.kordamp.gradle.stats'
+
 // Below plugins are for easily creating 'fat jars' and Window's executable files.
 // apply plugin: 'edu.sc.seis.launch4j'
 // apply plugin: 'com.github.johnrengelman.shadow'
@@ -56,6 +59,11 @@ tasks.withType(FindBugs) {
     xml.enabled = false
     html.enabled = true
   }
+}
+
+
+stats {
+  formats = ['xml', 'html']
 }
 
 /*
@@ -120,6 +128,9 @@ buildscript {
 
       // License Plugin
       classpath "gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.14.0"
+
+      // SLoC Stat Generator
+      classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.0'
 
       /*
         For building fat jars. TODO - Move to JavaFX Packager plugin
