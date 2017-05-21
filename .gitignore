@@ -1,6 +1,8 @@
 
 # Build Directories
 build/
+.gradle/
+.idea/
 
 # Compiled binaries
 *.class

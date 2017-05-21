@@ -16,6 +16,9 @@ apply plugin: 'com.github.ben-manes.versions'
 // [ Test Console Reporter ] //
 apply plugin: 'com.github.ksoichiro.console.reporter'
 
+// [ License Plugin ] //
+apply plugin: "com.github.hierynomus.license"
+
 // Below plugins are for easily creating 'fat jars' and Window's executable files.
 // apply plugin: 'edu.sc.seis.launch4j'
 // apply plugin: 'com.github.johnrengelman.shadow'
@@ -76,6 +79,16 @@ launch4j {
 
 */
 
+license {
+  ext.year = '2017'
+  ext.name = 'Jordan Knott'
+  ext.email = 'jordanaknott@gmail.com'
+
+  mapping {
+    java = 'SLASHSTAR_STYLE'
+  }
+}
+
 dependencyUpdates.resolutionStrategy = {
   componentSelection { rules ->
     rules.all { ComponentSelection selection ->
@@ -104,6 +117,9 @@ buildscript {
 
       // Test Console Reporter
       classpath 'com.github.ksoichiro:gradle-console-reporter:0.5.0'
+
+      // License Plugin
+      classpath "gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.14.0"
 
       /*
         For building fat jars. TODO - Move to JavaFX Packager plugin
