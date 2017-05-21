@@ -33,6 +33,6 @@ public class TestHelloWorld {
 
     @Test
     public void testHelloWorld() {
-        assertEquals(new HelloWorld().helloWorld(), "Hello, World");
+        assertEquals(new HelloWorld().helloWorld(), "Hello, World!");
     }
 }
