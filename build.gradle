@@ -22,6 +22,9 @@ apply plugin: "com.github.hierynomus.license"
 // [ SLoC Stat Generator ] //
 apply plugin: 'org.kordamp.gradle.stats'
 
+// [ Project Versioning Generator ] //
+apply plugin: 'net.nemerosa.versioning'
+
 // Below plugins are for easily creating 'fat jars' and Window's executable files.
 // apply plugin: 'edu.sc.seis.launch4j'
 // apply plugin: 'com.github.johnrengelman.shadow'
@@ -131,6 +134,9 @@ buildscript {
 
       // SLoC Stat Generator
       classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.0'
+
+      // Project Versioning Generator
+      classpath 'net.nemerosa:versioning:2.0.0'
 
       /*
         For building fat jars. TODO - Move to JavaFX Packager plugin
