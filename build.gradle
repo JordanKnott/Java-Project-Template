@@ -8,6 +8,7 @@ apply plugin: 'application'
 // [ Coding Standards ] //
 apply plugin: 'checkstyle'
 apply plugin: 'findbugs'
+apply plugin: 'jacoco'
 
 // [ Dependency Version Checker ] //
 apply plugin: 'com.github.ben-manes.versions'
@@ -32,6 +33,14 @@ dependencies {
   compile 'ch.qos.logback:logback-core:1.2.3'
 
   compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+}
+
+jacocoTestReport {
+  reports {
+    xml.enabled false
+    csv.enabled false
+    html.destination "${buildDir}/jacoco-report"
+  }
 }
 
 mainClassName = "net.thenightwolf.Main" // Enter main class here
